@@ -228,7 +228,7 @@ c            write(*,*) my_rank,ir,indexmap(ir),theta(ir)
       allocate(outu(nri), outlcd(nri))
 
 c
-      memoryperomega = 9*3*16*nsta*nri*0.000001
+      memoryperomega = 9d0*3d0*16d0*dble(nsta)*dble(nri)*0.000001
       outputinterval = outputmemory/memoryperomega != integer*nr
 c
       if(outputinterval.gt.(np+1)) outputinterval=np+1
